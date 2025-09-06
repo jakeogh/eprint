@@ -3,7 +3,7 @@
 # tab-width:4
 """
 Error Print: eprint()
-print() to sys.stderr
+print() to sys.stderr with a print() compatible API
 """
 
 import sys
@@ -11,8 +11,5 @@ import sys
 
 def eprint(*args, **kwargs) -> None:
     """print() to sys.stderr"""
-    try:
-        kwargs.pop("file")
-    except KeyError:
-        pass
+    kwargs.pop("file", None)
     print(*args, file=sys.stderr, **kwargs)
