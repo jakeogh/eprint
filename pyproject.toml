@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eprint"
-version = "0.1"
-description = "print() alias that writes to sys.stderr"
+version = "0.0.1760854490"
+description = "print() wrapper that writes to sys.stderr"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
 ]
