@@ -6,13 +6,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eprint"
-version = "0.0.1760854490"
+version = "0.0.1760854837"
 description = "print() wrapper that writes to sys.stderr"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
 ]
 dependencies = []
 requires-python = ">=3.11"
+keywords = ["stderr", "print", "logging", "debug"]
 
 [project.license]
 text = "ISC"
