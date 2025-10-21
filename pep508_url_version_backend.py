@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 PEP 508 URL + Version Workaround Backend
 
@@ -38,7 +40,7 @@ Usage in pyproject.toml:
 import os
 import shutil
 import sys
-import tempfile
+#import tempfile
 from pathlib import Path
 
 try:
@@ -80,7 +82,7 @@ def _has_custom_index():
         "index-urls",
         [
             "jakeogh.github.io",
-            "myapps-index",
+            "pip-index",
         ],
     )
 
@@ -119,6 +121,7 @@ def _get_dependencies():
     config = _load_config()
 
     if _has_custom_index():
+        print("custom index detected, using fast-path")
         # Fast path - use version constraints
         deps = config.get("dependencies-indexed", [])
         print(
@@ -310,6 +313,7 @@ def build_editable(
     config_settings=None,
     metadata_directory=None,
 ):
+    print("build_editable()", wheel_directory, file=sys.stderr)
     """PEP 660 hook: Build an editable wheel."""
     if hasattr(_orig_backend, "build_editable"):
         return _orig_backend.build_editable(
