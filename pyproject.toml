@@ -5,7 +5,7 @@ backend-path = ["."]
 
 [project]
 name = "eprint"
-version = "0.0.1761023854"
+version = "0.0.1761025433"
 description = "print() wrapper that writes to sys.stderr"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
@@ -38,7 +38,6 @@ dependencies-indexed = [
 # Slow fallback - used when custom index is NOT configured
 # Hook should keep these URLs up to date
 dependencies-git = [
-    "eprint @ git+https://git@github.com/jakeogh/eprint",
 ]
 
 # Optional: Custom markers to detect if index is configured
