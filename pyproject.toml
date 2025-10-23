@@ -5,7 +5,7 @@ backend-path = ["."]
 
 [project]
 name = "eprint"
-version = "0.0.1761027667"
+version = "1!0.0.1761259143"
 description = "print() wrapper that writes to sys.stderr"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
@@ -32,9 +32,7 @@ eprint = [
 [tool.pep508-url-version-backend]
 # Fast path - used when custom index is configured
 # Hook should update these version numbers when dependencies change
-dependencies-indexed = [
-    "eprint>=0.0.1760909962",
-]
+dependencies-indexed = []
 
 # Slow fallback - used when custom index is NOT configured
 # Hook should keep these URLs up to date
