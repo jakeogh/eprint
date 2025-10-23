@@ -5,7 +5,7 @@ backend-path = ["."]
 
 [project]
 name = "eprint"
-version = "1!0.0.1761259153"
+version = "1!0.0.1761259337"
 description = "print() wrapper that writes to sys.stderr"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
@@ -27,7 +27,6 @@ eprint = [
     "py.typed",
 ]
 
-
 # Configuration for our custom backend
 [tool.pep508-url-version-backend]
 # Fast path - used when custom index is configured
@@ -36,8 +35,7 @@ dependencies-indexed = []
 
 # Slow fallback - used when custom index is NOT configured
 # Hook should keep these URLs up to date
-dependencies-git = [
-]
+dependencies-git = []
 
 # Optional: Custom markers to detect if index is configured
 # If any of these strings appear in PIP_INDEX_URL or PIP_EXTRA_INDEX_URL,
